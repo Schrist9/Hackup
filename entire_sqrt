@@ -1,0 +1,21 @@
+i = True
+while i:
+	
+	try:
+		u = int(input('Entrer un nombre: '))
+	except ValueError:
+		print('Entrée invalide, recommencer... ')
+	else:
+		i = False
+
+if u<0:
+	print("La racine carrée de {} n'existe pas. ".format(u))
+else:
+	i=0
+	while i**2 != u:
+		i+=1
+		if i>u:
+			print("{} n'as pas de racine entière.".format(u))
+			break
+	if i<u:
+		print('La racine de {} est: {}'.format(u,i))
